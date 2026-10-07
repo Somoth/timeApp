@@ -1,0 +1,17 @@
+.labeledValue {
+  display: flex;
+  flex-direction: column;
+  align-items: var(--labeled-value-align, flex-start);
+  gap: 6px;
+}
+
+.label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}

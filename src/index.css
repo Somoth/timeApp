@@ -1,0 +1,42 @@
+/*
+ * Global styles: design tokens and base element styles only.
+ * Component styles live next to each component in *.module.css files.
+ *
+ */
+:root {
+  --ground: #e9ecf2;
+  --panel: #fbfcfd;
+  --ink: #1a2238;
+  --muted: #5d667a;
+  --rule: #c8cfdb;
+  --stamp: #3346d3;
+  --stamp-wash: rgb(51 70 211 / 0.08);
+  --on-stamp: #fff;
+  --live: #1f9d6b;
+
+  --font-body: 'Hanken Grotesk Variable', system-ui, sans-serif;
+  --font-mono: 'Martian Mono Variable', ui-monospace, monospace;
+
+  color-scheme: light;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible {
+  outline: 2px solid var(--stamp);
+  outline-offset: 3px;
+}

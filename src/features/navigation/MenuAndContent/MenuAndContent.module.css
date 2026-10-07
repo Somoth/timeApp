@@ -1,0 +1,22 @@
+.menuArea {
+  grid-area: menu;
+  padding: 24px 16px;
+  border-right: 1px solid var(--rule);
+}
+
+.content {
+  grid-area: content;
+  padding: 40px 48px;
+}
+
+@media (max-width: 720px) {
+  .menuArea {
+    padding: 8px 16px;
+    border-right: none;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .content {
+    padding: 28px 16px;
+  }
+}

@@ -1,0 +1,21 @@
+/* Matches the brief's wireframe: header across the top, menu left, content right. */
+.layout {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    'header header'
+    'menu content';
+  min-height: 100vh;
+}
+
+@media (max-width: 720px) {
+  .layout {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas:
+      'header'
+      'menu'
+      'content';
+  }
+}

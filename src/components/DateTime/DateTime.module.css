@@ -1,0 +1,19 @@
+.dateTime {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.time {
+  font-size: 18px;
+  font-weight: var(--dt-time-weight, 600);
+}
+
+.date {
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--dt-date-color, inherit);
+}
