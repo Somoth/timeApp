@@ -10,7 +10,7 @@ Front-end only, no back end.
 
 ## Getting started
 
-Requires Node 26 (see `.nvmrc`).
+Requires Node 24 LTS (see `.nvmrc`), the same version used by CI and Vercel.
 
 ```bash
 nvm use        # switch to the Node version in .nvmrc
@@ -27,6 +27,14 @@ npm run dev    # http://localhost:5173
 | `npm run preview` | Serve the production build locally |
 
 **Stack:** React 19, TypeScript 6, Zustand 5, Vite 8, Vitest 5 + Testing Library, ESLint, CSS Modules. No UI or date libraries.
+
+## Deployment
+
+Live at **https://time-app-wheat.vercel.app**.
+
+This project auto-deploys to Vercel on every push to `main`.
+
+GitHub Actions (`.github/workflows/ci.yml`) runs lint, tests and the build on every push and pull request to `main`.
 
 ## Project structure
 
@@ -86,7 +94,7 @@ Re-renders are kept to a minimum by **where state lives**, not by memoization. T
 - `setInterval` starts at an arbitrary offset, so the display can lag up to a second behind the real time.
 - Its small delays add up, which can skip or repeat a second.
 
-Tests check that the clock lines up with the second and that it doesn't drift over an hour.
+Tests check that the clock lines up with the second, and that it re-aligns after a late tick instead of drifting (a plain `setInterval` fails both).
 
 ### Date and time formatting
 

@@ -34,7 +34,6 @@ describe('render isolation', () => {
     render(<App />)
     vi.clearAllMocks()
 
-    vi.setSystemTime(Date.now() + 500)
     await user.click(screen.getByRole('button', { name: 'Stamp current time' }))
 
     expect(Stamp).toHaveBeenCalledTimes(1)
