@@ -1,8 +1,3 @@
-/*
- * Global styles: design tokens and base element styles only.
- * Component styles live next to each component in *.module.css files.
- *
- */
 :root {
   --ground: #e9ecf2;
   --panel: #fbfcfd;

@@ -3,9 +3,7 @@ import styles from './DateTime.module.css'
 
 type DateTimeProps = {
   value: Date
-  /** `strong` makes the time heavier. */
   emphasis?: 'normal' | 'strong'
-  /** `muted` greys out the date. */
   dateTone?: 'default' | 'muted'
 }
 
