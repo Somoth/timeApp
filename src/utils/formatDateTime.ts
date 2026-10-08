@@ -1,10 +1,10 @@
-// `undefined` locale = the visitor's browser locale, so each user sees their
-// own conventions (e.g. "8:04:05 PM" / "Oct 6, 2026" in the US) in their own timezone.
+const timeFormatter = new Intl.DateTimeFormat(undefined, { timeStyle: 'medium' })
+const dateFormatter = new Intl.DateTimeFormat(undefined, { dateStyle: 'medium' })
 
 export function formatTime(date: Date): string {
-  return date.toLocaleTimeString(undefined, { timeStyle: 'medium' })
+  return timeFormatter.format(date)
 }
 
 export function formatDate(date: Date): string {
-  return date.toLocaleDateString(undefined, { dateStyle: 'medium' })
+  return dateFormatter.format(date)
 }
