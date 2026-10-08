@@ -3,17 +3,21 @@ import styles from './DateTime.module.css'
 
 type DateTimeProps = {
   value: Date
-  className?: string
+  /** `strong` makes the time heavier. */
+  emphasis?: 'normal' | 'strong'
+  /** `muted` greys out the date. */
+  dateTone?: 'default' | 'muted'
 }
 
-export default function DateTime({ value, className }: DateTimeProps) {
+export default function DateTime({ value, emphasis = 'normal', dateTone = 'default' }: DateTimeProps) {
   return (
-    <time
-      className={className ? `${styles.dateTime} ${className}` : styles.dateTime}
-      dateTime={value.toISOString()}
-    >
-      <span className={styles.time}>{formatTime(value)}</span>
-      <span className={styles.date}>{formatDate(value)}</span>
+    <time className={styles.dateTime} dateTime={value.toISOString()}>
+      <span className={emphasis === 'strong' ? `${styles.time} ${styles.strong}` : styles.time}>
+        {formatTime(value)}
+      </span>
+      <span className={dateTone === 'muted' ? `${styles.date} ${styles.muted}` : styles.date}>
+        {formatDate(value)}
+      </span>
     </time>
   )
 }

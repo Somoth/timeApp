@@ -8,12 +8,19 @@
 
 .time {
   font-size: 18px;
-  font-weight: var(--dt-time-weight, 600);
+  font-weight: 600;
+}
+
+.strong {
+  font-weight: 800;
 }
 
 .date {
   font-size: 11px;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: var(--dt-date-color, inherit);
+}
+
+.muted {
+  color: var(--muted);
 }

@@ -1,7 +1,3 @@
-.clock {
-  --dt-date-color: var(--muted);
-}
-
 .dot {
   width: 6px;
   height: 6px;

@@ -15,7 +15,7 @@ export default function LiveClock() {
         </>
       }
     >
-      <DateTime value={now} className={styles.clock} />
+      <DateTime value={now} dateTone="muted" />
     </LabeledValue>
   )
 }

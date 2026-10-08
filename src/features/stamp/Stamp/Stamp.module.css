@@ -1,6 +1,5 @@
 .stamp {
-  --dt-time-weight: 800;
-
+  display: inline-flex;
   padding: 4px 12px;
   color: var(--stamp);
   background: var(--stamp-wash);

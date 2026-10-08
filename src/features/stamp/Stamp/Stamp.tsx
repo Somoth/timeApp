@@ -9,7 +9,9 @@ export default function Stamp() {
   return (
     <LabeledValue label="Last stamp" announceChanges>
       {stamp ? (
-        <DateTime key={stamp.getTime()} value={stamp} className={styles.stamp} />
+        <span key={stamp.getTime()} className={styles.stamp}>
+          <DateTime value={stamp} emphasis="strong" />
+        </span>
       ) : (
         <span className={styles.empty}>Not stamped yet</span>
       )}
